@@ -1,5 +1,11 @@
 # HTML Lists, Control Flow with JS, and the CSS Box Model
 
+## IN CLASS NOTES AND TAKEAWAYS
+
+- [LECTURE NOTES](lecture-notes.md)
+- [ARRAY REPLIT](https://replit.com/@arpatterson31/Class201d90-ARRAYS#index.js)
+- [LOOPS REPLIT](https://replit.com/@arpatterson31/Class201d90-LOOPS#index.js)
+
 ## Overview
 
 This class is a highly conceptual. We will be diving deeper into **control flow**, **arrays**, and more about the CSS **box model** and basic page layout.
