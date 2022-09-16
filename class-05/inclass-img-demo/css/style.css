@@ -1,0 +1,41 @@
+* {
+  background-color: darkgrey;
+}
+
+
+/* Header Styling */
+
+
+
+/* Figure Styling */
+
+figure {
+  width: 60%;
+  background-color: red;
+  padding: 50px;
+  margin: auto;
+}
+
+
+figcaption {
+  background-color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+
+p {
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+
+  /* font related */
+
+  font-family: 'Pacifico', cursive;
+
+  font-size: 2.5vw;
+}
+
+
