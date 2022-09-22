@@ -4,7 +4,7 @@
 let kittenSection = document.getElementById('kitten-profiles');
 
 // **** STEP 1: GRAB THE ELEMENT TO LISTEN TO! ******
-
+let myForm = document.getElementById('my-form');
 
 
 // ******** HELPER FUNCTIONS - GENERATE A RANDOM NUMBER ***********
@@ -116,8 +116,37 @@ renderKittens();
 
 
 // **** STEP 3: define our callback *****
+// goal: add new kitten to the caboodle and display on submit
+// ** CALLED ON SUBMIT ACTION
+function handleSubmit(event){
+  // ** STOP DEFAULT BEHAVIOUR
+  event.preventDefault();
 
+  // ** GATHER INFORMATION FROM FROM**
+  let name = event.target.kittenName.value;
+  let photo = event.target.photo.value;
+  let interests = event.target.interests.value;
+  interests = interests.split(',');
+  // playing,eating,sleeping >> ['playing', 'eating', 'sleeping'];
+
+  let isGoodWithCats = event.target.cats.checked;
+  let isGoodWithDogs = event.target.dogs.checked;
+  let isGoodWithKids = event.target.kids.checked;
+
+  // ** CREATE NEW KITTEN OBJECT VIA CONSTRUCTOR **
+  let newKitten = new Kitten(name, interests, isGoodWithCats, isGoodWithDogs, isGoodWithKids, photo);
+
+  // ** RENDER OUR KITTEN ON SCREEN **
+  newKitten.getAge();
+  newKitten.render();
+
+  // ** CLEAR FORM FOR THE NEXT INPUT **
+  myForm.reset();
+}
+
+// ** LAB HINT - REMOVE YOUR FOOTER, ADD YOUR ROW, RE-ADD YOUR FOOTER
 
 
 // ****** STEP 2: ATTACH EVENT LISTENER: type of event, and our callback function or event handler ******
+myForm.addEventListener('submit', handleSubmit);
 

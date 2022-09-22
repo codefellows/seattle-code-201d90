@@ -1,39 +1,42 @@
 'use strict';
 
-// FORM EVENTS DEMO
+// ! FORM DEMO
+// #pragma mark Step 1: GRAB THE ELEMENT WE WANT TO LISTEN TO
+let myForm = document.getElementById("my-form");
 
-// STEP 1 - Grab the element I want to listen to
-let myForm = document.getElementById('my-form');
-
-
-// STEP 3 - define our callback function or event handler
-
-function handleSubmit(event){
+// #pragma mark Step 3: DEFINE OUR EVENT HANDLER (CALLBACK FUNCTION)
+function handleSubmit(event) {
   event.preventDefault();
-  console.log('heyyyyyyy');
+
   let name = event.target.firstName.value;
   console.log(name);
 
-  let age = +event.target.age.value;
+  let age = ~~event.target.age.value;
   console.log(age);
   console.log(typeof age);
 
+  let someNum = 5 + age;
+  console.log(someNum);
+
+  myForm.reset();
 }
 
-
-// STEP 2 - ATTACH MY EVENT LISTENER
+// #pragma mark Step 2: ADD EVENT LISTENER - 2 ARGS - EVENT TYPE, CALLBACK FUNCTION (EVENT HANDLER) = THAT FUNCTION PASSED INTO ANOTHER FUNCTION
 myForm.addEventListener('submit', handleSubmit);
 
-// BOX CLICK DEMO
-// Step 1: Grab our element we are going to listen to
+
+
+
+// ! BOX CLICK DEMO
+// #pragma mark Step 1: GRAB THE ELEMENT WE WANT TO LISTEN TO
 let myContainer = document.getElementById('container');
 let parentEl = document.getElementById('results');
 
 
-// Step 3: Define our event handler - callback function
+// #pragma mark Step 3: DEFINE OUR EVENT HANDLER (CALLBACK FUNCTION)
 function handleClick(event) {
-  // console.log('this is the event', event);
-  // console.log('this is the target', event.target);
+  console.log('this is the event', event);
+  console.log('this is the target', event.target);
 
   if (event.target.id === 'box-one') {
     let pEl = document.createElement('p');
@@ -54,5 +57,5 @@ function handleClick(event) {
   }
 }
 
-// Step 2: Add the Event Listener - 2 args - event type, callback function = function that is passed into to another function // event handler
+// #pragma mark Step 2: ADD EVENT LISTENER - 2 ARGS - EVENT TYPE, CALLBACK FUNCTION (EVENT HANDLER) = THAT FUNCTION PASSED INTO ANOTHER FUNCTION
 myContainer.addEventListener('click', handleClick);

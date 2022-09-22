@@ -9,36 +9,35 @@
     <h1>Events: boxes and forms</h1>
   </header>
   <main>
- 
+
     <form id="my-form">
       <fieldset>
         <legend>Fieldset Context</legend>
-
-        <!-- INPUTS AND LABELS - 2 options -->
-        <!-- OPTION 1 have input and label as siblings IMPORTANT NEED "FOR" ON LABEL, "ID" ON INPUT, tethers them together -->
-        <label for="firstName">Name: </label>
+        <!-- Inputs and labels: 2 options -->
+        <!-- Option 1: elements are siblings: tether label and input with for and id-->
+        <label for="firstName">Name:</label>
         <input id="firstName" type="text" name="firstName">
-        <!-- event.target.firstName.value === whatever the user enters -->
+        <!-- event.target.firstName.value === whatever user inputs -->
 
-        <!-- OPTION 2 is to nest input in your label -->
-        <label>Age:
+        <!-- Option 2: next label adn input field -->
+        <label>Age
           <input type="number" name="age" required>
-          <!-- event.target.age.value -->
+          <!-- event.target.age.value === whatever user inputs -->
         </label>
 
-        <label for="password">Password: </label>
+        <label for="password">Password</label>
         <input id="password" type="password" name="password">
 
-        <select name="housewives" id="housewives">
+        <select name="reality-tv" id="reality-tv">
+          <option value="default">Pick a show</option>
           <option value="bh">Beverly Hills</option>
-          <option value="slc">SLC</option>
-          <option value="none">None</option>
+          <option value="bachelor">Bachelor</option>
+          <option value="first-sight">Married At First Sight</option>
         </select>
-
+        <!-- event.target.reality-tv.value -->
       </fieldset>
       <button type="submit">Submit</button>
     </form>
-
 
     <section id="container">
       <h3>Click on a box below</h3>
