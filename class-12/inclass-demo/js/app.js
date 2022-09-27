@@ -57,16 +57,19 @@ function renderImgs() {
 
 function renderChart() {
 
+  // TODO: Create arrays that will hold our dynamic data for the chart obj
   let goatNames = [];
   let goatVotes = [];
   let goatViews = [];
 
+  // TODO: Loop through our goatArray and pull out the necessary information for our data arrays
   for (let i = 0; i < goatArray.length; i++) {
     goatNames.push(goatArray[i].name);
     goatVotes.push(goatArray[i].clicks);
     goatViews.push(goatArray[i].views);
   }
 
+  // TODO: create a chart object to pass into the Chart constructor call to populate the chart
   let myChartObj = {
     type: 'bar',
     data: {
@@ -105,6 +108,7 @@ function renderChart() {
     }
   };
 
+  // TODO: call the Chart constructor. It takes in 2 args, the canvas element and the object with data
   new Chart(canvasElem, myChartObj);
 }
 
