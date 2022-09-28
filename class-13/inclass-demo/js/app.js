@@ -2,6 +2,8 @@
 
 console.log('hey there hey!');
 
+// ! LOCAL STORAGE DEMO CODE STARTS ON LINE 193
+
 // ******* GLOBAL VARIABLES *******
 let voteCount = 15;
 let goatArray = [];
