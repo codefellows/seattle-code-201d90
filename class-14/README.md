@@ -1,8 +1,8 @@
-# CSS Animations; Intermediate JS Topics; Using Local Storage to Share Data Between Two Pages
+# Intermediate JS Topics; Using Local Storage to Share Data Between Two Pages
 
 ## Overview
 
-In this class you are going to be introduced to CSS animations, and transitioning from one CSS style to another.  You also will learn how to load multiple JavaScript files from multiple HTML files.
+In this class you will learn how to load multiple JavaScript files from multiple HTML files.
 
 ## Learning Objectives
 
@@ -11,7 +11,6 @@ In this class you are going to be introduced to CSS animations, and transitionin
 #### Describe and Define
 
 - JavaScript inheritance
-- CSS animations
 
 #### Execute
 
